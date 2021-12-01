@@ -1,0 +1,24 @@
+server:
+  port: 8181
+  servlet:
+    context-path: /customer
+spring:
+  application:
+    name: customer
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db01
+    username: igdc
+    password: 123.abc
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 10
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format:
+          sql: true
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
