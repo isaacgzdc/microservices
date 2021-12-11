@@ -19,9 +19,9 @@ spring:
   application:
     name: customer
   datasource:
-    url: jdbc:postgresql://localhost:5432/db01
-    username: igdc
-    password: 123.abc
+    url: jdbc:postgresql://localhost:5432/springdb
+    username: spring
+    password: springpass
     driver-class-name: org.postgresql.Driver
     hikari:
       connectionTimeout: 20000
