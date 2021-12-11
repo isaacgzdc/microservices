@@ -1,0 +1,33 @@
+2021-12-03 07:11:08.271  INFO 10111 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-03 07:11:08.273  INFO 10111 --- [Thread-5] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-12-03 07:11:08.294  INFO 10111 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-12-03 07:11:08.296  INFO 10111 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-12-03 07:11:08.363  INFO 10111 --- [restartedMain] l.d.m.customer.CustomerApplication       : Starting CustomerApplication using Java 17 on fedora with PID 10111 (/home/igdc/devel/workspace/microservices/customer/target/classes started by igdc in /home/igdc/devel/workspace/microservices/customer)
+2021-12-03 07:11:08.364 DEBUG 10111 --- [restartedMain] l.d.m.customer.CustomerApplication       : Running with Spring Boot v2.5.7, Spring v5.3.13
+2021-12-03 07:11:08.364  INFO 10111 --- [restartedMain] l.d.m.customer.CustomerApplication       : No active profile set, falling back to default profiles: default
+2021-12-03 07:11:08.472  INFO 10111 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-03 07:11:08.477  INFO 10111 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 1 JPA repository interfaces.
+2021-12-03 07:11:08.541  INFO 10111 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2021-12-03 07:11:08.541  INFO 10111 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-03 07:11:08.541  INFO 10111 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-12-03 07:11:08.547  INFO 10111 --- [restartedMain] o.a.c.c.C.[.[localhost].[/customer]      : Initializing Spring embedded WebApplicationContext
+2021-12-03 07:11:08.547  INFO 10111 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 182 ms
+2021-12-03 07:11:08.575  INFO 10111 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-03 07:11:08.579  INFO 10111 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-12-03 07:11:08.581  INFO 10111 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-12-03 07:11:08.582  INFO 10111 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-12-03 07:11:08.608  WARN 10111 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2021-12-03 07:11:08.608  WARN 10111 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "customer" does not exist, skipping
+2021-12-03 07:11:08.608  WARN 10111 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2021-12-03 07:11:08.608  WARN 10111 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "customer_seq" does not exist, skipping
+2021-12-03 07:11:08.617  INFO 10111 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-03 07:11:08.617  INFO 10111 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-03 07:11:21.195  WARN 10111 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-03 07:11:21.270  INFO 10111 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-03 07:11:21.284  INFO 10111 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path '/customer'
+2021-12-03 07:11:21.287  INFO 10111 --- [restartedMain] l.d.m.customer.CustomerApplication       : Started CustomerApplication in 12.946 seconds (JVM running for 39053.33)
+2021-12-03 07:11:21.287 DEBUG 10111 --- [restartedMain] l.d.microservices.customer.DataLoader    : LOAD INITIAL DATA HERE !!!
+2021-12-03 07:11:21.301 DEBUG 10111 --- [restartedMain] l.d.microservices.customer.DataLoader    : Customer(id=1, uuid=81b6a1fd-96aa-4ead-86d1-94d82e83e34d, mail=null, name=Fedora, lastUpdated=1980-02-13T14:20:47, active=true, amount=10, type=DEVELOPER)
+2021-12-03 07:11:21.304 DEBUG 10111 --- [restartedMain] l.d.microservices.customer.DataLoader    : Customer(id=2, uuid=8754bcae-0853-4784-9709-a5ce103a20d9, mail=null, name=Catalina, lastUpdated=1995-10-02T21:45:14, active=true, amount=10, type=ARCHITECT)
+2021-12-03 07:11:21.305 DEBUG 10111 --- [restartedMain] l.d.microservices.customer.DataLoader    : Customer(id=3, uuid=4f75af9d-e359-4847-b742-0d3ccb51562b, mail=null, name=Kubernetes, lastUpdated=2001-07-20T06:15:22, active=false, amount=1, type=DEVELOPER)
+2021-12-03 07:11:21.307  INFO 10111 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

@@ -3,6 +3,14 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.1</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
 	<groupId>local.demo</groupId>
 	<artifactId>microservices</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -13,13 +21,22 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>17</java.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<spring.boot.maven.plugin.version>2.5.7</spring.boot.maven.plugin.version>
 		<spring.boot.dependencies.version>2.5.7</spring.boot.dependencies.version>
+		<spring-cloud.version>2021.0.0</spring-cloud.version>
 	</properties>
+
+	<modules>
+		<module>customer</module>
+		<module>configserver</module>
+	</modules>
 
 	<dependencyManagement>
 
 		<dependencies>
+
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
@@ -27,6 +44,15 @@
 				<scope>import</scope>
 				<type>pom</type>
 			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
 		</dependencies>
 
 	</dependencyManagement>
@@ -69,7 +95,4 @@
 		</pluginManagement>
 	</build>
 
-	<modules>
-		<module>customer</module>
-	</modules>
 </project>

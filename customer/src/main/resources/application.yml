@@ -2,7 +2,20 @@ server:
   port: 8181
   servlet:
     context-path: /customer
+    
+logging:
+  file: 
+    path: log
+  level:
+    local:
+      demo:
+        microservices:
+          customer: DEBUG
+    
 spring:
+  output:
+    ansi:
+      enabled: DETECT
   application:
     name: customer
   datasource:
@@ -22,3 +35,19 @@ spring:
         format:
           sql: true
         dialect: org.hibernate.dialect.PostgreSQL10Dialect
+#
+# RabbitMQ
+#         
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest        
+
+
+rabbitmq:
+  queue-name: test-queue
+  exchange-name: test-exchange
+  routing-key-name: test.path.#
+  
+  
