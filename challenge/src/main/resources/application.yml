@@ -1,0 +1,11 @@
+server:
+  port: 8282
+#  servlet:
+#    context-path: /customer
+spring:
+  application:
+    name: challenge
+  profiles:
+    active: dev
+  config:
+    import: optional:configserver:http://localhost:8888

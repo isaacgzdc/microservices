@@ -1,13 +1,13 @@
 server:
-  port: 9494
+  port: 8888
 spring:
+  application:
+    name: configserver
   cloud:
     config:
       server:
         git:
           uri:  git@github.com:isaacgzdc/microservices-config.git
-#          clone-on-start: true
-logging:
-  level:
-    web:
-      property: 'DEBUG'
+#          uri: file://${user.home}/devel/workspace/microservices/configuration
+          skipSslValidation: true
+          clone-on-start: true
